@@ -22,8 +22,10 @@
 	<scm>
 		<connection>scm:git:${project.scm.url}</connection>
 		<developerConnection>scm:git:${project.scm.url}</developerConnection>
-		<url>git@github.com:qcastel/github-actions-maven-release-sample.git</url>
-		<tag>HEAD</tag>
+		<!--<url>git@github.com:qcastel/github-actions-maven-release-sample.git</url>-->
+		<!--<tag>HEAD</tag>-->
+		<url>git@github.com:brk3/github-actions-maven-release-sample.git</url>
+		<tag>0.0.27</tag>
 	</scm>
 
 	<dependencies>
@@ -46,31 +48,31 @@
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>com.google.cloud.tools</groupId>
-				<artifactId>jib-maven-plugin</artifactId>
-				<version>${google.jib.version}</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>build</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<from>
-						<image>qcastel/docker-alpine-with-bash:0.3</image>
-					</from>
-					<to>
-						<image>registry.hub.docker.com/qcastel/github-actions-maven-release-sample</image>
-						<tags>
-							<tag>${project.version}</tag>
-							<tag>latest</tag>
-						</tags>
-					</to>
-				</configuration>
-			</plugin>
+			<!--<plugin>-->
+				<!--<groupId>com.google.cloud.tools</groupId>-->
+				<!--<artifactId>jib-maven-plugin</artifactId>-->
+				<!--<version>${google.jib.version}</version>-->
+				<!--<executions>-->
+					<!--<execution>-->
+						<!--<phase>package</phase>-->
+						<!--<goals>-->
+							<!--<goal>build</goal>-->
+						<!--</goals>-->
+					<!--</execution>-->
+				<!--</executions>-->
+				<!--<configuration>-->
+					<!--<from>-->
+						<!--<image>qcastel/docker-alpine-with-bash:0.3</image>-->
+					<!--</from>-->
+					<!--<to>-->
+						<!--<image>registry.hub.docker.com/qcastel/github-actions-maven-release-sample</image>-->
+						<!--<tags>-->
+							<!--<tag>${project.version}</tag>-->
+							<!--<tag>latest</tag>-->
+						<!--</tags>-->
+					<!--</to>-->
+				<!--</configuration>-->
+			<!--</plugin>-->
 
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
